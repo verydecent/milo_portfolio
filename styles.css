@@ -4,49 +4,90 @@
   box-sizing: border-box;
 }
 
-a,
-a:visited {
-  color: #000;
+a {
+  color: #050000;
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #009fb7;
 }
 
 body {
-  /* color: var(--mainBlack); */
-  /* background: var(--mainWhite); */
-  font-family: "Commissioner", sans-serif;
+  color: #050000;
+  font-family: "Karla", sans-serif;
   width: 900px;
   margin: 0 auto;
+  line-height: 1.5;
 }
 
 ul {
   list-style: none;
 }
 
+.section-title {
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.section-text {
+  font-size: 12px;
+  color: #555555;
+  line-height: 1.7;
+}
+
 /* ========== Navigation ========== */
 
-.nav {
-  border: 1px solid red;
-  position: fixed;
+.nav-column {
   height: 100%;
-  width: 200px;
+  position: fixed;
+  padding: 0 20px;
+  top: 0;
+  width: 240px;
+  min-height: 500px;
+}
+
+.nav {
+  margin-top: 40px;
+  position: absolute;
+  top: 20%;
+  height: 500px;
+}
+
+.nav-title-container {
+  margin: 20px 20px 30px 14px;
+}
+
+.nav-title {
+  font-size: 22px;
+}
+
+.nav-list {
+  margin-left: 14px;
 }
 
 .nav-link {
-  padding-top: 12px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 1.7;
 }
 
+/* ========== Main ========== */
+
 .main {
-  border: 1px solid purple;
-  height: 100%;
-  margin-left: 200px;
-  overflow-y: auto;
+  position: absolute;
+  top: 20%;
+  margin-top: 60px;
+  max-width: 600px;
+  margin-left: 240px;
   padding-top: 20px;
   padding-left: 20px;
 }
 
-.about {
+/* ========== About ========== */
+
+.bio-section {
+  /* overflow-y: auto; */
 }
