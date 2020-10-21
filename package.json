@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/verydecent/milo_portfolio/issues"
   },
-  "homepage": "https://github.com/verydecent/milo_portfolio#readme"
+  "homepage": "https://github.com/verydecent/milo_portfolio#readme",
+  "dependencies": {
+    "contentful": "^7.14.8"
+  }
 }
