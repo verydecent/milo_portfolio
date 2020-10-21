@@ -1,0 +1,1 @@
+const contentful = require("contentful");
