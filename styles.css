@@ -86,8 +86,12 @@ ul {
   padding-left: 20px;
 }
 
+/* ========== Bio ========== */
+
 .bio-section {
 }
+
+/* ========== Work ========== */
 
 .works-setion {
   margin-top: -100px;
@@ -110,5 +114,3 @@ ul {
   width: 100%;
   height: auto;
 }
-
-/* ========== About ========== */
