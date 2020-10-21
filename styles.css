@@ -91,6 +91,10 @@ ul {
 .bio-section {
 }
 
+.copyright {
+  margin-top: 16px;
+}
+
 /* ========== Work ========== */
 
 .works-setion {
@@ -113,4 +117,14 @@ ul {
 .img {
   width: 100%;
   height: auto;
+}
+
+/* ========== Credit ========== */
+
+.credit {
+  font-size: 12px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 1%;
+  right: 1%;
 }
