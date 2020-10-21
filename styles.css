@@ -10,7 +10,7 @@ a {
 }
 
 a:hover {
-  color: #4d7298;
+  color: #52b788;
 }
 
 body {
@@ -122,6 +122,6 @@ ul {
   font-size: 12px;
   position: absolute;
   z-index: 1000;
-  bottom: 1%;
-  right: 1%;
+  bottom: 1px;
+  right: 1px;
 }
