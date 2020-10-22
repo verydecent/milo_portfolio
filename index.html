@@ -19,32 +19,39 @@
           <h1 class="nav-title"><a href="/">Milo Dane Nichols</a></h1>
         </div>
         <ul class="nav-list">
-          <li class="nav-link"><a href="works/shows.html">Shows</a></li>
+          <li id="shows-list-button" class="nav-link">Shows</li>
           <!-- Shows -->
-          <li class="nav-link">
-            <a href="shows/something_dope_for_the_people.html">
-              Something Dope For The People: Group Show</a
-            >
-          </li>
-          <li class="nav-link">
-            <a href="shows/mauros_cafe.html">Mauro's Cafe</a>
-          </li>
-          <li class="nav-link">
-            <a href="shows/maladaptive_senior_thesis.html">
-              Maladaptive: Senior Thesis</a
-            >
-          </li>
-          <li class="nav-link">
-            <a href="shows/oakland_city_hall.html">Oakland City Hall</a>
-          </li>
-          <!-- Shows end -->
-          <li class="nav-link">
-            <a href="works/sculptures.html">Sculpture</a>
-          </li>
-          <li class="nav-link"><a href="works/paintings.html">Paintings</a></li>
-          <li class="nav-link"><a href="works/prints.html">Prints</a></li>
-          <li class="nav-link"><a href="works/doodles.html">Doodles</a></li>
-          <li class="nav-link"><a href="works/misc.html">Mixed Media</a></li>
+          <ul class="shows-list">
+            <li class="nav-link">
+              <a href="shows/something_dope_for_the_people.html">
+                Something Dope For The People
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="shows/mauros_cafe.html">Mauro's Cafe</a>
+            </li>
+            <li class="nav-link">
+              <a href="shows/maladaptive_senior_thesis.html">Maladaptive </a>
+            </li>
+            <li class="nav-link">
+              <a href="shows/oakland_city_hall.html">Oakland City Hall</a>
+            </li>
+          </ul>
+          <ul class="works-list">
+            <li class="nav-link">
+              <a href="works/sculptures.html">Sculpture</a>
+            </li>
+            <li class="nav-link">
+              <a href="works/paintings.html">Paintings</a>
+            </li>
+            <li class="nav-link"><a href="../works/prints.html">Prints</a></li>
+            <li class="nav-link">
+              <a href="works/doodles.html">Doodles</a>
+            </li>
+            <li class="nav-link">
+              <a href="works/misc.html">Mixed Media</a>
+            </li>
+          </ul>
         </ul>
       </nav>
     </div>
@@ -85,6 +92,7 @@
 </html>
 
 <script>
+  // Contentful Request
   const client = contentful.createClient({
     space: "lhmy5mgb9x5k",
     accessToken: "pD7aIO7WDf28G0qD_jScmSX_vvgNOuLk3DOd95P5HpI",
@@ -114,5 +122,17 @@
       imageContainer.appendChild(image);
       workSection[0].appendChild(imageContainer);
     });
+  });
+
+  // Nav Sliding
+  const showsListButton = document.getElementById("shows-list-button");
+  const showsList = document.getElementsByClassName("shows-list");
+
+  showsListButton.addEventListener("click", function () {
+    if (showsList[0].className === "shows-list") {
+      showsList[0].className = "shows-list show-list-appear";
+    } else {
+      showsList[0].className = "shows-list";
+    }
   });
 </script>
