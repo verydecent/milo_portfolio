@@ -94,19 +94,15 @@ ul {
   color: var(--link-color);
 }
 
-#shows-nav-link {
-  margin-bottom: 10px;
-  font-size: 12px;
-  line-height: 1.7;
-}
-
 .shows-list {
   height: 0;
   transition: height 0.8s;
+  margin-left: 16px;
 }
 
 .show-list-appear {
   height: 120px;
+  margin-bottom: 4px;
 }
 
 /* ========== Main ========== */
