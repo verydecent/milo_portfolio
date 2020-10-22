@@ -4,13 +4,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  --link-color: #52b788;
+}
+
 a {
   color: #050000;
   text-decoration: none;
 }
 
 a:hover {
-  color: #52b788;
+  color: var(--link-color);
 }
 
 body {
@@ -73,6 +77,36 @@ ul {
   margin-bottom: 10px;
   font-size: 12px;
   line-height: 1.7;
+}
+
+.works-list {
+  width: 100%;
+  z-index: 1000;
+  position: relative;
+  background: white;
+}
+
+#shows-list-button {
+  cursor: pointer;
+}
+
+#shows-list-button:hover {
+  color: var(--link-color);
+}
+
+#shows-nav-link {
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.shows-list {
+  height: 0;
+  transition: height 0.8s;
+}
+
+.show-list-appear {
+  height: 120px;
 }
 
 /* ========== Main ========== */
