@@ -96,7 +96,7 @@ ul {
 
 .shows-list {
   height: 0;
-  transition: height 0.8s;
+  transition: height 0.4s;
   padding-left: 10px;
 }
 
