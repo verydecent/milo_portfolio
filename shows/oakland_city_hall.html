@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doodles</title>
+    <link href="../styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+  </head>
+  <body>
+    <div class="nav-column">
+      <nav class="nav">
+        <div class="nav-title-container">
+          <h1 class="nav-title"><a href="/">Milo Dane Nichols</a></h1>
+        </div>
+        <ul class="nav-list">
+          <li class="nav-link">
+            <a href="../works/shows.html">Shows</a>
+          </li>
+          <!-- Shows -->
+          <li class="nav-link">
+            <a href="something_dope_for_the_people.html">
+              Something Dope For The People: Group Show
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="mauros_cafe.html">Mauro's Cafe</a>
+          </li>
+          <li class="nav-link">
+            <a href="maladaptive_senior_thesis.html">
+              Maladaptive: Senior Thesis
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="oakland_city_hall.html">Oakland City Hall</a>
+          </li>
+          <!-- Shows end -->
+          <li class="nav-link">
+            <a href="../works/sculptures.html">Sculpture</a>
+          </li>
+          <li class="nav-link">
+            <a href="../works/paintings.html">Paintings</a>
+          </li>
+          <li class="nav-link"><a href="../works/prints.html">Prints</a></li>
+          <li class="nav-link"><a href="../works/doodles.html">Doodles</a></li>
+          <li class="nav-link"><a href="../works/misc.html">Mixed Media</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="main">
+      <div class="works-section">
+        <h2 class="section-title">Oakland City Hall</h2>
+        <!-- Img -->
+        <div class="img-container">
+          <img src="../images/doodles/1.jpg" class="img" />
+          <p class="work-text">Untitled - 2020 - Materials: Paper, Pencil</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  const client = contentful.createClient({
+    space: "lhmy5mgb9x5k",
+    accessToken: "pD7aIO7WDf28G0qD_jScmSX_vvgNOuLk3DOd95P5HpI",
+  });
+
+  client.getEntry("392IQ5SOhKMwM9rwLu5vgv").then((entry) => {
+    console.log(entry);
+  });
+</script>
