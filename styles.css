@@ -97,7 +97,7 @@ ul {
 .shows-list {
   height: 0;
   transition: height 0.8s;
-  margin-left: 16px;
+  padding-left: 10px;
 }
 
 .show-list-appear {
