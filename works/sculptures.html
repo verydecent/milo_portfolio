@@ -32,128 +32,41 @@
     </div>
     <div class="main">
       <div class="works-section">
-        <h2 class="section-title">Sculptures</h2>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/1.jpg" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/2.jpg" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/3.jpg" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/4.jpg" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/5.jpg" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/6.png" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/7.jpg" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/8.jpg" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/9.jpg" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/10.jpg" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/11.jpg" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/12.png" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/13.jpg" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/14.jpg" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/15.png" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/16.png" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/17.png" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/18.png" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/19.png" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/20.png" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/21.jpg" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/22.jpg" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/23.jpg" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/sculptures/24.jpg" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Pencil, Paper</p>
-        </div>
+        <!-- Adding JS Here -->
       </div>
     </div>
   </body>
 </html>
+
+<script>
+  const client = contentful.createClient({
+    space: "lhmy5mgb9x5k",
+    accessToken: "pD7aIO7WDf28G0qD_jScmSX_vvgNOuLk3DOd95P5HpI",
+  });
+
+  client.getEntry("2GXcXDY66Mw5UkJRE3hNnk").then((entry) => {
+    const workSection = document.getElementsByClassName("works-section");
+
+    const title = document.createElement("h2");
+    const text = document.createElement("p");
+
+    title.className = "section-title";
+    text.className = "work-text";
+
+    title.textContent = entry.fields.title;
+    text.textContent = entry.fields.description;
+
+    workSection[0].appendChild(title);
+    workSection[0].appendChild(text);
+
+    entry.fields.images.forEach((img) => {
+      const imageContainer = document.createElement("div");
+      imageContainer.className = "img-container";
+      const image = document.createElement("img");
+      image.className = "img";
+      image.src = img.fields.file.url;
+      imageContainer.appendChild(image);
+      workSection[0].appendChild(imageContainer);
+    });
+  });
+</script>
