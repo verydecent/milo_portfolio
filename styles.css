@@ -62,6 +62,7 @@ ul {
 
 .nav-title {
   font-size: 22px;
+  white-space: nowrap;
 }
 
 .nav-list {
@@ -81,7 +82,7 @@ ul {
   top: 20%;
   margin-top: 60px;
   max-width: 500px;
-  margin-left: 240px;
+  margin-left: 260px;
   padding-top: 20px;
   padding-left: 20px;
 }
