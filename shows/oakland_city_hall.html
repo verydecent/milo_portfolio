@@ -54,12 +54,7 @@
     </div>
     <div class="main">
       <div class="works-section">
-        <h2 class="section-title">Oakland City Hall</h2>
-        <!-- Img -->
-        <div class="img-container">
-          <img src="../images/doodles/1.jpg" class="img" />
-          <p class="work-text">Untitled - 2020 - Materials: Paper, Pencil</p>
-        </div>
+        <!-- Adding JS Here -->
       </div>
     </div>
   </body>
@@ -72,6 +67,28 @@
   });
 
   client.getEntry("392IQ5SOhKMwM9rwLu5vgv").then((entry) => {
-    console.log(entry);
+    const workSection = document.getElementsByClassName("works-section");
+
+    const title = document.createElement("h2");
+    const text = document.createElement("p");
+
+    title.className = "section-title";
+    text.className = "work-text";
+
+    title.textContent = entry.fields.title;
+    text.textContent = entry.fields.description;
+
+    workSection[0].appendChild(title);
+    workSection[0].appendChild(text);
+
+    entry.fields.images.forEach((img) => {
+      const imageContainer = document.createElement("div");
+      imageContainer.className = "img-container";
+      const image = document.createElement("img");
+      image.className = "img";
+      image.src = img.fields.file.url;
+      imageContainer.appendChild(image);
+      workSection[0].appendChild(imageContainer);
+    });
   });
 </script>

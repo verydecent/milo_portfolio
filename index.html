@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.ico" />
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
   </head>
   <body>
     <div class="nav-column">
@@ -20,6 +20,24 @@
         </div>
         <ul class="nav-list">
           <li class="nav-link"><a href="works/shows.html">Shows</a></li>
+          <!-- Shows -->
+          <li class="nav-link">
+            <a href="shows/something_dope_for_the_people.html">
+              Something Dope For The People: Group Show</a
+            >
+          </li>
+          <li class="nav-link">
+            <a href="shows/mauros_cafe.html">Mauro's Cafe</a>
+          </li>
+          <li class="nav-link">
+            <a href="shows/maladaptive_senior_thesis.html">
+              Maladaptive: Senior Thesis</a
+            >
+          </li>
+          <li class="nav-link">
+            <a href="shows/oakland_city_hall.html">Oakland City Hall</a>
+          </li>
+          <!-- Shows end -->
           <li class="nav-link">
             <a href="works/sculptures.html">Sculpture</a>
           </li>
@@ -65,3 +83,15 @@
     </div>
   </body>
 </html>
+
+<script>
+  const client = contentful.createClient({
+    space: "lhmy5mgb9x5k",
+    accessToken: "pD7aIO7WDf28G0qD_jScmSX_vvgNOuLk3DOd95P5HpI",
+  });
+  console.log(client.getEntries());
+
+  client.getEntries((entries) => {
+    console.log(entries);
+  });
+</script>

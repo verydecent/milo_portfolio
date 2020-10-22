@@ -103,13 +103,13 @@ ul {
 
 .img-container {
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 16px;
 }
 
 .work-text {
   font-size: 12px;
   color: #555555;
-  text-align: center;
+  margin-bottom: 12px;
 }
 
 .img {
