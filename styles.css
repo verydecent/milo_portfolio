@@ -96,6 +96,17 @@ ul {
   background: #000;
 }
 
+.mobile-shows-list {
+  height: 0;
+  transition: height 0.4s;
+  padding-left: 10px;
+}
+
+.mobile-show-list-appear {
+  height: 120px;
+  margin-bottom: 4px;
+}
+
 #mobile-shows-list-button {
   cursor: pointer;
 }
