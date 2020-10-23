@@ -13,6 +13,56 @@
     <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
   </head>
   <body>
+    <!-- Mobile Nav Begin -->
+    <div class="mobile-nav-burger">
+      <div class="mobile-nav-line"></div>
+      <div class="mobile-nav-line"></div>
+      <div class="mobile-nav-line"></div>
+    </div>
+    <div class="mobile-nav-column">
+      <div class="mobile-nav-exit-button">
+        <i class="fa fa-times"></i>
+      </div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li id="mobile-shows-list-button" class="nav-link">Shows</li>
+          <ul class="mobile-shows-list">
+            <li class="nav-link">
+              <a href="shows/something_dope_for_the_people.html">
+                Something Dope For The People
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="shows/mauros_cafe.html">Mauro's Cafe</a>
+            </li>
+            <li class="nav-link">
+              <a href="shows/maladaptive_senior_thesis.html">Maladaptive </a>
+            </li>
+            <li class="nav-link">
+              <a href="shows/oakland_city_hall.html">Oakland City Hall</a>
+            </li>
+          </ul>
+          <ul class="works-list">
+            <li class="nav-link">
+              <a href="works/sculptures.html">Sculpture</a>
+            </li>
+            <li class="nav-link">
+              <a href="works/paintings.html">Paintings</a>
+            </li>
+            <li class="nav-link">
+              <a href="../works/prints.html">Prints</a>
+            </li>
+            <li class="nav-link">
+              <a href="works/doodles.html">Doodles</a>
+            </li>
+            <li class="nav-link">
+              <a href="works/misc.html">Mixed Media</a>
+            </li>
+          </ul>
+        </ul>
+      </nav>
+    </div>
+    <!-- Mobile Nav End -->
     <div class="wrapper">
       <div class="nav-column">
         <nav class="nav">
@@ -99,14 +149,7 @@
       workSection[0].appendChild(imageContainer);
     });
   });
-  const showsListButton = document.getElementById("shows-list-button");
-  const showsList = document.getElementsByClassName("shows-list");
-
-  showsListButton.addEventListener("click", function () {
-    if (showsList[0].className === "shows-list") {
-      showsList[0].className = "shows-list show-list-appear";
-    } else {
-      showsList[0].className = "shows-list";
-    }
-  });
 </script>
+
+<!-- Mobile / Nav Sliding functions -->
+<script src="scripts.js"></script>
