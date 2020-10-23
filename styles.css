@@ -16,12 +16,12 @@ a {
 a:hover {
   color: var(--link-color);
 }
+/* ========== Main ========== */
 
 body {
   color: #050000;
   font-family: "Karla", sans-serif;
-  width: 900px;
-  margin: 0 auto;
+  width: 100%;
   line-height: 1.5;
 }
 
@@ -45,6 +45,7 @@ ul {
 /* ========== Navigation ========== */
 
 .nav-column {
+  display: none;
   height: 100%;
   position: fixed;
   padding: 0 20px;
@@ -108,13 +109,8 @@ ul {
 /* ========== Main ========== */
 
 .main {
-  position: absolute;
-  top: 20%;
-  margin-top: 60px;
-  max-width: 500px;
-  margin-left: 260px;
-  padding-top: 20px;
-  padding-left: 20px;
+  width: 100%;
+  padding: 20px 8px 30px;
 }
 
 /* ========== Bio ========== */
@@ -158,4 +154,30 @@ ul {
   font-size: 12px;
   color: #555555;
   text-decoration: underline;
+}
+
+@media all and (min-width: 480px) {
+  .wrapper {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .nav-column {
+    display: block;
+    height: 100%;
+    position: fixed;
+    padding: 0 20px;
+    top: 0;
+    width: 240px;
+    min-height: 500px;
+  }
+
+  .main {
+    position: absolute;
+    top: 20%;
+    margin-top: 60px;
+    max-width: 650px;
+    margin-left: 300px;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
 }
