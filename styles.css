@@ -63,6 +63,8 @@ ul {
 .nav-column {
   display: none;
   height: 100%;
+  background: white;
+  width: 100%;
   position: fixed;
   padding: 0 20px;
   top: 0;

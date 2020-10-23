@@ -1,5 +1,14 @@
 // Mobile Nav
 const mobileNav = document.querySelector(".mobile-nav");
+const navColumn = document.querySelector(".nav-column");
+
+mobileNav.addEventListener("click", function () {
+  if (navColumn.style.display === "none") {
+    navColumn.style.display = "block";
+  } else {
+    navColumn.style.display = "none";
+  }
+});
 console.log(mobileNav);
 
 // Nav Sliding
