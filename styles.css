@@ -16,7 +16,13 @@ a {
 a:hover {
   color: var(--link-color);
 }
+
 /* ========== Main ========== */
+
+.mobile-title {
+  font-size: 30px;
+  white-space: nowrap;
+}
 
 body {
   color: #050000;
@@ -90,6 +96,22 @@ ul {
   background: #000;
 }
 
+#mobile-shows-list-button {
+  cursor: pointer;
+}
+
+#mobile-shows-list-button:hover {
+  color: var(--link-color);
+}
+
+#shows-list-button {
+  cursor: pointer;
+}
+
+#shows-list-button:hover {
+  color: var(--link-color);
+}
+
 /* ========== Navigation ========== */
 
 .nav-column {
@@ -135,14 +157,6 @@ ul {
   z-index: 1000;
   position: relative;
   background: white;
-}
-
-#shows-list-button {
-  cursor: pointer;
-}
-
-#shows-list-button:hover {
-  color: var(--link-color);
 }
 
 .shows-list {
@@ -207,27 +221,11 @@ ul {
 }
 
 @media all and (min-width: 480px) {
+  /* ========== Main ========== */
+
   .wrapper {
     width: 1000px;
     margin: 0 auto;
-  }
-
-  .mobile-nav-column {
-    display: none;
-  }
-
-  .mobile-nav-burger {
-    display: none;
-  }
-
-  .nav-column {
-    display: block;
-    height: 100%;
-    position: fixed;
-    padding: 0 20px;
-    top: 0;
-    width: 240px;
-    min-height: 500px;
   }
 
   .main {
@@ -238,5 +236,31 @@ ul {
     margin-left: 300px;
     padding-top: 20px;
     padding-left: 20px;
+  }
+
+  .mobile-title {
+    display: none;
+  }
+
+  /* ========== Mobile Navigation ========== */
+
+  .mobile-nav-column {
+    display: none;
+  }
+
+  .mobile-nav-burger {
+    display: none;
+  }
+
+  /* ========== Navigation ========== */
+
+  .nav-column {
+    display: block;
+    height: 100%;
+    position: fixed;
+    padding: 0 20px;
+    top: 0;
+    width: 240px;
+    min-height: 500px;
   }
 }
