@@ -42,6 +42,22 @@ ul {
   line-height: 1.7;
 }
 
+/* ========== Mobile Navigation ========== */
+
+.mobile-nav {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border-radius: 2px;
+}
+
+.mobile-nav-line {
+  width: 18px;
+  height: 2px;
+  margin-bottom: 4px;
+  background: #000;
+}
+
 /* ========== Navigation ========== */
 
 .nav-column {
@@ -161,6 +177,11 @@ ul {
     width: 1000px;
     margin: 0 auto;
   }
+
+  .mobile-nav {
+    display: none;
+  }
+
   .nav-column {
     display: block;
     height: 100%;
