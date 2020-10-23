@@ -12,25 +12,25 @@ mobileNavBurger.addEventListener("click", function () {
 });
 
 // Mobile Nav Exit Button
-
 mobileNavExitButton.addEventListener("click", function () {
   mobileNavColumn.style.display = "none";
 });
 
-// Mobile Sliding
+// Mobile Show List Sliding
 const mobileShowsListButton = document.getElementById(
   "mobile-shows-list-button"
 );
 const mobileShowsList = document.querySelector(".mobile-shows-list");
 
 mobileShowsListButton.addEventListener("click", function () {
-  if (mobileShowsList.className === "shows-list") {
-    mobileShowsList.className = "shows-list show-list-appear";
+  if (mobileShowsList.className === "mobile-shows-list") {
+    mobileShowsList.className = "mobile-shows-list mobile-show-list-appear";
   } else {
-    mobileShowsList.className = "shows-list";
+    mobileShowsList.className = "mobile-shows-list";
   }
 });
-// Nav Sliding
+
+// Nav Show List Sliding
 const showsListButton = document.getElementById("shows-list-button");
 const showsList = document.querySelector(".shows-list");
 

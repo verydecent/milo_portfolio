@@ -77,6 +77,7 @@ ul {
 }
 
 .mobile-nav-exit-button {
+  cursor: pointer;
   position: absolute;
   top: 12px;
   right: 12px;
@@ -168,17 +169,6 @@ ul {
   z-index: 1000;
   position: relative;
   background: white;
-}
-
-.shows-list {
-  height: 0;
-  transition: height 0.4s;
-  padding-left: 10px;
-}
-
-.show-list-appear {
-  height: 120px;
-  margin-bottom: 4px;
 }
 
 /* ========== Main ========== */
