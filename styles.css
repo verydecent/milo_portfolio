@@ -89,6 +89,17 @@ ul {
   right: 12px;
 }
 
+.shows-list {
+  height: 0;
+  transition: height 0.4s;
+  padding-left: 10px;
+}
+
+.show-list-appear {
+  height: 120px;
+  margin-bottom: 4px;
+}
+
 .mobile-shows-list {
   height: 0;
   transition: height 0.4s;
