@@ -80,21 +80,13 @@ ul {
   cursor: pointer;
   position: absolute;
   top: 12px;
-  right: 12px;
+  right: 16px;
 }
 
 .mobile-nav-burger {
   position: absolute;
   top: 12px;
   right: 12px;
-  border-radius: 2px;
-}
-
-.mobile-nav-line {
-  width: 18px;
-  height: 2px;
-  margin-bottom: 4px;
-  background: #000;
 }
 
 .mobile-shows-list {
