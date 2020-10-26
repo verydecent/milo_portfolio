@@ -5,7 +5,9 @@
 }
 
 :root {
-  --link-color: #52b788;
+  /* --link-color: #52b788; */
+  /* background: #; */
+  --link-color: #f5ac53;
 }
 
 a {
@@ -155,6 +157,9 @@ ul {
 .nav-title {
   font-size: 22px;
   white-space: nowrap;
+}
+
+.nav-title a {
 }
 
 .nav-list {
