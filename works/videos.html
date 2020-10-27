@@ -129,29 +129,27 @@
     accessToken: "pD7aIO7WDf28G0qD_jScmSX_vvgNOuLk3DOd95P5HpI",
   });
 
-  client.getEntry("2zli2FQLyG6sLuJnAf7DnB").then((entry) => {
-    const workSection = document.getElementsByClassName("works-section");
+  client.getEntry("2KFsZMJjjXsqblOAjAd8dC").then((entry) => {
+    console.log(entry);
+    const workSection = document.querySelector(".works-section");
 
     const title = document.createElement("h2");
-    const text = document.createElement("p");
 
     title.className = "section-title";
-    text.className = "work-text";
 
     title.textContent = entry.fields.title;
-    text.textContent = entry.fields.description;
 
-    workSection[0].appendChild(title);
-    workSection[0].appendChild(text);
+    workSection.appendChild(title);
 
-    entry.fields.images.forEach((img) => {
-      const imageContainer = document.createElement("div");
-      imageContainer.className = "img-container";
-      const image = document.createElement("img");
-      image.className = "img";
-      image.src = img.fields.file.url;
-      imageContainer.appendChild(image);
-      workSection[0].appendChild(imageContainer);
+    entry.fields.videoList.forEach((video) => {
+      const iFrame = document.createElement('iframe');
+      iFrame.src = video.fields.sourceUrl;
+      console.log('iFrame', iFrame);
+      iFrame.style.width = "100%";
+      iFrame.style.height = "420px";
+      iFrame.frameBorder = "0";
+
+      workSection.appendChild(iFrame);
     });
   });
 </script>
