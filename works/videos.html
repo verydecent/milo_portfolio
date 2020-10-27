@@ -143,12 +143,19 @@
 
     entry.fields.videoList.forEach((video) => {
       const iFrame = document.createElement('iframe');
+      const videoTitle = document.createElement('p');
+      const videoDescription = document.createElement('p');
       iFrame.src = video.fields.sourceUrl;
-      console.log('iFrame', iFrame);
       iFrame.style.width = "100%";
       iFrame.style.height = "420px";
       iFrame.frameBorder = "0";
+      videoTitle.textContent = video.fields.videoTitle;
+      videoTitle.classList = "work-text-center";
+      videoDescription.textContent = video.fields.description;
+      videoDescription.classList = "work-text-center";
 
+      workSection.appendChild(videoTitle);
+      workSection.appendChild(videoDescription);
       workSection.appendChild(iFrame);
     });
   });
