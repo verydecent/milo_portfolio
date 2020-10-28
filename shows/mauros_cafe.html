@@ -140,10 +140,14 @@
     entry.fields.images.forEach((img) => {
       const imageContainer = document.createElement("div");
       imageContainer.className = "img-container";
+      const description = document.createElement("p");
+      description.className = "work-text-center";
+      description.textContent = img.fields.description || "";
       const image = document.createElement("img");
       image.className = "img";
       image.src = img.fields.file.url;
       imageContainer.appendChild(image);
+      imageContainer.appendChild(description);
       workSection[0].appendChild(imageContainer);
     });
   });
